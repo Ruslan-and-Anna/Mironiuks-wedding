@@ -44,25 +44,98 @@
 
 	justify-content: center;
   
-	font-size: 3rem;
+	font-size: 42px;
   font-family:'Cormorant SC light';
-	}
-	.container {
-	padding-top: 30px;
+    /*color: #C29784;*/
+    color:#847E6E;
 
+    @media (min-width: 1025px) {
+      color: white;
+      font-size: 62px;
+    }
+
+    @media (min-width: 1025px) {
+      position: absolute;
+      bottom: 50px;
+      right: -130px;
+   
+   
+    }
+	}
+	.container_timer {
+  padding-top: 30px;
+    @media (min-width: 1025px) {
+      position: absolute;
+      bottom: 100px;
+      
+    }
 	}
 
+  .text-center{
+      /*color: #C29784;*/
+    color:#847E6E;
+    font-family:'Cormorant SC light';
+
+    @media (min-width: 1025px) {
+      position: absolute;
+      bottom: 120px;
+      right: -50px;
+      color: white;
+      font-size: 24px;
+      
+   
+    }
+  }
+
+  .countdown_block{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .countdown_block_text{
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    font-family:'Cormorant SC light';
+    
+    @media (min-width: 1025px) {
+      color: white;
+      font-size: 12px;
+    }
+  }
 </style>
 
 
-<div class="container">
+<div class="container_timer">
 
 	<div class="text-center">Осталось:</div>
   <div class="countdown" id="countdown">
-    <span id="days">00</span> :
-    <span id="hours">00</span> :
-    <span id="minutes">00</span> :
-    <span id="seconds">00</span>
+    <div class="countdown_block">
+      <div class="">
+        <span id="days">00</span>|
+      </div>
+      <div class="countdown_block_text">дней</div>
+    </div>
+    <div class="countdown_block">
+      <div class="">
+        <span id="hours">00</span>|
+      </div>
+      <div class="countdown_block_text">часов</div>
+    </div>
+    <div class="countdown_block">
+      <div class="">
+        <span id="minutes">00</span>|
+      </div>
+      <div class="countdown_block_text">минут</div>
+    </div>
+    <div class="countdown_block">
+      <div class="">
+        <span id="seconds">00</span>
+      </div>
+      <div class="countdown_block_text">секунд</div>
+    </div>   
+
   </div>
 </div>
 
@@ -107,12 +180,20 @@
 	}, 1000);
 	}
 </script>
-<audio controls autoplay loop autoplay = "autoplay" src="media/track.mp3" class="audio"></audio>
+<div class="audio_box">
+  <audio controls  loop autoplay = "autoplay" src="media/track.mp3" class="audio"></audio>
+  <a href="#" onclick="document.querySelector('audio').play()">
+   
+    <img id = "playM" src="img/play2.gif" alt="" width="50" height="50">
+  </a>
+</div>
+<script>
+  let play = document.getElementById("playM");
 
+  play.onclick = function() { play.src = "img/play3.gif"; }
+</script>
 
-          
-
-              
+  
             </div>
           </div>
           
@@ -182,7 +263,7 @@
         Pallet
       </div>
       <div class="dresscode-top_text">
-        Дорогие наши родственники и друзья. Мы предоставили для вас палитру, которая будет на нашем мероприятии:
+        Дорогие гости, мы будем очень рады видеть вас в представленной ниже палитре:
       </div>
       <div class="dresscode-body">
         <div class="dresscode-body_palitra">
@@ -214,68 +295,90 @@
     
             </div>
           </div>
-          
-          <div class="dresscode-body_Ladies">
-  
+          <div class="dresscode-body_text">
+            <div class="dresscode-body_text_ladies-gentlemens">
+              Ladies 
+            </div>
+            <div class="dresscode-body_text_outfit">
+              Outfit 
+            </div>
+          </div>
+          <div class="dresscode-body_Ladies1-gentlemens dresscode-body_Ladies-gentlemens">
+            
             <div class="dresscode-body_block">
-              <img src="img/ladies1.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-body_text">
-                какой то текст
-              </div>
+              <img src="img/ladies1.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div> 
             <div class="dresscode-body_block">
-              <img src="img/ladies2.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-body_text">
-                какой то текст
-              </div>
+              <img src="img/ladies2.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div> 
             <div class="dresscode-body_block">
-              <img src="img/ladies3.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-body_text">
-                какой то текст
-              </div>
+              <img src="img/ladies3.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div>  
           </div>
-          <div class="dresscode-body_men">
-  
+          <div class="dresscode-body_Ladies2-gentlemens dresscode-body_Ladies-gentlemens">
             <div class="dresscode-body_block">
-              <img src="img/ladies1.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-bod_text">
-                какой то текст
-              </div>
+              <img src="img/ladies4.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div> 
             <div class="dresscode-body_block">
-              <img src="img/ladies2.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-body_text">
-                какой то текст
-              </div>
+              <img src="img/ladies5.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div> 
             <div class="dresscode-body_block">
-              <img src="img/ladies3.jpeg" alt="" width="100%" height="80%"dresscode-body_palitra_more>
-              <div class="dresscode-body_text">
-                какой то текст
-              </div>
+              <img src="img/ladies6.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
             </div>  
           </div>
-  
+
+          <div class="dresscode-body_text">
+            <div class="dresscode-body_text_ladies-gentlemens">
+              Gentlemen 
+            </div>
+            <div class="dresscode-body_text_outfit">
+              Outfit 
+            </div>
+          </div>
+          <div class="dresscode-body_Ladies1-gentlemens dresscode-body_Ladies-gentlemens">
+            
+            <div class="dresscode-body_block">
+              <img src="img/ladies1.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div> 
+            <div class="dresscode-body_block">
+              <img src="img/ladies2.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div> 
+            <div class="dresscode-body_block">
+              <img src="img/ladies3.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div>  
+          </div>
+          <div class="dresscode-body_Ladies2-gentlemens dresscode-body_Ladies-gentlemens">
+            <div class="dresscode-body_block">
+              <img src="img/ladies4.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div> 
+            <div class="dresscode-body_block">
+              <img src="img/ladies5.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div> 
+            <div class="dresscode-body_block">
+              <img src="img/ladies6.jpeg" alt="" width="100%" height="100%"dresscode-body_palitra_more>
+            </div>  
+          </div>
         </div>
-        
-        
-      
-        
       </div>
     </div>
   </div>
   <div class="container">
     <div class="place">
       <div class="place-top page_zagolovok">
-        Wounder Forest
+        
       </div>
      
       <div class="place-body">
         <div class="place-body_pics">
           <div class="place-body_pic_top">
-            <img src="img/Place1.jpeg" alt="Вид площадки" width="100%" height="100%">
+            <div class="place-body_pic_top-text">
+              <div class="place-body_pic_top-text_wonder">
+                Wonder 
+              </div>
+              <div class="place-body_pic_top-text_forest">
+                Forest 
+              </div>
+            </div>
           </div>
           <div class="place-body_pic_bottom">
             <div class="place-body_pic_bottom1">

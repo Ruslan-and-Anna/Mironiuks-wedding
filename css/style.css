@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 /*первая страница-*/
 
 .container{
-
+  
 
 
 }
@@ -152,7 +152,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .main-page {
+ 
 
+  @media (min-width: 1025px) {
+
+
+
+  }
 }
 
 
@@ -182,46 +188,39 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .main-page_invite{
-  color: #C29784;
+  /*color: #C29784;*/
+  color:#847E6E;
   /*Brittany Coleman*/
   /*Callem Script*/
   /*Aquarelle*/
+  @media (min-width: 1025px) {
+   font-size: 150px;
+   margin-top: 20px;
+    
+ 
+  }
 }
 
 
 .main-page_names{
-  color: #848789;
+  /*color: #C29784;*/
+  color:#847E6E;
   font-size: 36px;
   font-family: 'Cormorant SC';
   margin-top: 15px;
-  color: #C29784;
+  
 }
 
 .main-page_date{
-  color: #848789;
+  /*color: #C29784;*/
+  color:#847E6E;
   font-size: 18px;
   font-family: 'Cormorant SC';
-  color: #C29784;
+  @media (min-width: 1025px) {
+    font-size: 24px;
+   }
 }
 
-.main-page_timer{
-  color: #848789;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-  font-family: 'Cormorant SC';
-  color: #C29784;
-}
-
-.main-page_timer_left{
-  font-size: 28px;
-
-}
-.main-page_timer_counter{
-  font-size: 38px;
-
-}
 
 
 /*вторая страница-*/
@@ -234,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .schedule-top{
-  color: black;
+  color: #848789;
 }
 
 
@@ -245,6 +244,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   height: 80%;
+  color: #848789;
 }
 .schedule-body_furshet_pic{
   
@@ -279,7 +279,7 @@ margin-right: 30px;
 }
 
 .dresscode-top{
- color: black;
+  color: #848789;
 
 }
 
@@ -288,8 +288,12 @@ margin-right: 30px;
   text-align: center;
   color: #848789;
   font-size: 20px;
-  
+  display: flex;
   font-family: 'Cormorant SC light';
+  max-width: 500px;
+  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dresscode-body_palitra{
@@ -381,28 +385,26 @@ margin-right: 30px;
   margin-top: 10px;
   height: 20px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 2s;
+
   .dresscode-body_circle_hidden-columns{
     opacity: 0;
+    transition: 1s;
+   
   }
 }
 
 .dresscode-body_palitra_more:hover{
   transition: 1s;
-  height: 220px;
-  
+  height: 170px;
   
   .dresscode-body_circle_hidden-columns{
     opacity: 1;
     transition: 3s;
-    
-    
   }
- 
-  
 }
 
 
@@ -413,34 +415,49 @@ margin-right: 30px;
   height: 80px;
   display: flex;
   flex-direction: row;
-
-  
- 
 }
 
 .dresscode-body_circle_hidden-columns{
   padding-top: 5px;
 }
 
-.dresscode-body_Ladies{
+.dresscode-body_Ladies-gentlemens{
   display: flex;
   justify-content: center;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dresscode-body_Ladies1-gentlemens{
+  margin-top: -30px;
 }
 
 .dresscode-body_block{
-  margin: 1%;
+  margin: 1% 1% 0.5% 1%;
 }
 
-.dresscode-body_men{
-  margin-top: -5%;
+
+
+.dresscode-body_text{
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
+.dresscode-body_text_ladies-gentlemens{
+  margin-right: 5px;
+  font-family: 'Cormorant SC light';
+  font-size: 26px; 
+  color: #848789;
+}
+
+.dresscode-body_text_outfit{
+  font-family: 'Brittany Coleman';
+  font-size: 70px;
+}
 
 /*Четвертая страница*/
 .place{
- 
   background-color: #FFFEFC;
   background-position: center;
   width: 100%;
@@ -449,23 +466,92 @@ margin-right: 30px;
 
 .place-top{
   padding-bottom: 30px;
-  color: black;
-  
+  color: #848789;
 }
 
 .place-body_pic_top{
   margin: 1% 1% 0% 1%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background: url(../img/Place1.jpeg) no-repeat  ; /*удалить fixed если не понравится*/
+  background-position: -50px 0px;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply; 
+
+  @media (min-width: 768px) {
+    width: 400px;
+    height: 400px;
+   }
+
+  @media (min-width: 1025px) {
+    width: 500px;
+    height: 500px;
+   }
+
   
+}
+
+.place-body_pic_top-text{
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-body_pic_top-text_wonder{
+  margin-right: 10px;
+  font-size: 100px;
+  font-family: 'Brittany Coleman';
+  font-weight: normal;
+
+  @media (min-width: 768px) {
+    font-size: 150px;
+   }
+
+  @media (min-width: 1025px) {
+    font-size: 200px;
+   }
+}
+
+.place-body_pic_top-text_forest{
+  font-family: 'Cormorant SC light';
+  font-size: 36px;
+  font-weight: 300;
+
+  @media (min-width: 768px) {
+    font-size: 42px;
+   }
+
+  @media (min-width: 1025px) {
+    font-size: 48px;
+   }
 }
 
 .place-body_pic_bottom{
   display: flex;
+  max-width: 768px;
+
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
 .place-body_pic_bottom1{
   margin: 1% 0.5% 1% 1%;
+  display: none;
+  
 }
 .place-body_pic_bottom2{
   margin: 1% 1% 0.5% 1%;
+  display: none;
 }
 
 .place-body_address{
@@ -475,31 +561,24 @@ margin-right: 30px;
   font-size: 20px;
   
   font-family: 'Cormorant SC light';
+  
+}
+
+.place-body_map{
+  max-width: 768px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .audio {
-  /*border-radius: 90px;*/
-  width: 22px;
-  height: 22px;
+
   display: none;
-  color: #06a9fa;
-  border-radius: 22px;
-  filter:grayscale(111) contrast(0%);
-  margin-right: 5px;
+
 }
 
-.audio_img{}
-
 .audio_box{
-  display: none;
-  width: 100px;
-  justify-content: end;
-  align-items: center;
-  color: white;
-  font-size: 30px;
-  margin-top: 520px;
-  margin-left: 250px;
-  
-
-
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
